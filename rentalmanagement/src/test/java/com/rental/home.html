@@ -1,0 +1,37 @@
+<!Doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>
+			Home
+		</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class = "container">
+			<h1>Hello, welcome to my first spring boot application.</h1>
+			
+			<h1>My  Houses List</h1>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Location</th>
+						<th>Vacancies</th>
+						<th>Contact</th>
+						<th>Type</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each ="house: ${houses}">
+						<td th:text="${house[0]}"></td>
+						<td th:text="${house[1]}"></td>
+						<td th:text="${house[2]}"></td>
+						<td th:text="${house[3]}"></td>
+						<td th:text="${house[4]}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+	</body>
+</html>
